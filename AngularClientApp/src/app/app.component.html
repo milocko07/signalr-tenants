@@ -226,19 +226,25 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <!--<p>Congratulations! Your app is running. 🎉</p>-->
       <div>
-        <h1>Chat</h1>
-        <ul *ngIf="messages.length > 0">
-          <li *ngFor="let message of messages">{{ message }}</li>
-        </ul>
         <div>
-          Group: <input type="text" [(ngModel)]="groupName" />
-          <button (click)="joinGroup()">Join Group</button>
+          Choose tenant:
+          <select [(ngModel)]="selectedTenant" [disabled]="isJoined">
+            <option *ngFor="let tenant of tenants" [value]="tenant">{{ tenant }}</option>
+          </select>
+          <button (click)="joinGroup()" [disabled]="isJoined">Join Group</button>
         </div>
         <div>
+          <p [innerText]=" 'User: ' + userId "></p>
           <input type="text" [(ngModel)]="message" placeholder="Enter message" />
-          <button (click)="sendMessage()">Send</button>
+          <button (click)="sendMessage()" [disabled]="!isJoined">Send</button>
+        </div>
+        <div [hidden]="!(messages.length > 0)">
+          <p [innerText]=" 'List of Messages in the group: ' + selectedTenant "></p>
+          <ul *ngIf="messages.length > 0">
+            <li *ngFor="let message of messages">{{ message }}</li>
+          </ul>
         </div>
       </div>
     </div>

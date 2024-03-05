@@ -7,6 +7,8 @@ import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 export class SignalRService {
   private connection: HubConnection | undefined;
 
+  public isConnected: boolean = false;
+
   constructor() { }
 
   public startConnection(): void {
@@ -18,15 +20,22 @@ export class SignalRService {
       .start()
       .then(_ => {
         console.log('SignalR chat connection started');
+        this.isConnected = true;
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.log(err);
+        this.isConnected = false;
+      });
   }
 
   public closeConnection(): void {
     if (this.connection) {
       this.connection
         .stop()
-        .catch(err => console.log(err));
+        .catch(err => {
+          console.log(err);
+          this.isConnected = false;
+        });
     }
   }
 

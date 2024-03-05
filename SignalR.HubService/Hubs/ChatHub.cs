@@ -4,9 +4,6 @@ namespace SignalR.HubService;
 
 public class ChatHub : Hub
 {
-    //public async Task SendMessageToGroup(string user, string message)
-    //    => await Clients.Group("Tenant Group").SendAsync("ReceiveMessage", user, message);
-
     private readonly IGroupManager _groupManager; // Optional dependency for managing groups (explained later)
 
     public ChatHub(IGroupManager groupManager = null) // Optional injection of IGroupManager
