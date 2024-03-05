@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.HubService", "SignalR.HubService.csproj", "{EF5396BD-26EC-4EC6-BDC5-CE40C5E82F9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF5396BD-26EC-4EC6-BDC5-CE40C5E82F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5396BD-26EC-4EC6-BDC5-CE40C5E82F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5396BD-26EC-4EC6-BDC5-CE40C5E82F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5396BD-26EC-4EC6-BDC5-CE40C5E82F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BABECD4-6C6C-4CF5-9981-9D6AEB1F2283}
+	EndGlobalSection
+EndGlobal

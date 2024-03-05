@@ -1,0 +1,6 @@
+@SignalR.HubService_HostAddress = http://localhost:5199
+
+GET {{SignalR.HubService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
