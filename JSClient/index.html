@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignalR JavaScript Client Example</title>
+</head>
+<body>
+    <h1>Js Tenant Chat</h1>
+    <select id="tenantDropdown">
+        <option value="">Select Tenant</option>
+        <option value="Tenant1">Tenant 1</option>
+        <option value="Tenant2">Tenant 2</option>
+    </select>
+    <button id="joinGroupButton" disabled>Join group</button>
+    <div id="chatWindow" style="display: none;">
+        <p id="userId"></p>
+        <input type="text" id="chatTextbox" placeholder="Enter message..." disabled>
+        <button type="text" id="chatButton" disabled>Send</button>
+    </div>
+    <div id="chatMessages" style="display: none;">
+        <p id="chatMessageTitle"></p>
+        <ul id="chatMessageList">            
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+</body>
+</html>
