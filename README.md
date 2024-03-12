@@ -45,15 +45,17 @@ This repository demonstrates the integration flow from an angular and vanilla js
 ## Setup with Azure SignalR Service
 
 1. Same steps as above but adding the AddAzureSignalR() method into the pipeline in [line 9](https://github.com/milocko07/signalr-tenants/blob/Seed/SignalR.HubService/Program.cs).
-2. Then follow the [official guide]([url](https://learn.microsoft.com/en-us/azure/azure-signalr/signalr-quickstart-dotnet-core) to set local credentials that basically are two steps:
+2. Then follow the [official guide](https://learn.microsoft.com/en-us/azure/azure-signalr/signalr-quickstart-dotnet-core) to set local credentials that basically are two steps:
+   
    dotnet user-secrets init
-   dotnet user-secrets set Azure:SignalR:ConnectionString "<Your azure signalr connection string>"
-3. Then run again the service and the client apps.
-4. You should see something similar to this:
+   
+   dotnet user-secrets set Azure:SignalR:ConnectionString "YourAzureSignalrConnectionString"
+4. Then run again the service and the client apps.
+5. You should see something similar to this:
 
    ![image](https://github.com/milocko07/signalr-tenants/assets/37205551/04455152-a590-40cc-b3e1-ff4acf4d6874)
 
-5. Finally you can monitor the SignalR service in the azure portal.
+6. Finally you can monitor the SignalR service in the azure portal.
   
 
 
