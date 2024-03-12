@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSignalR(); // Here should go Azure SignalR Service
+builder.Services.AddSignalR().AddAzureSignalR(); // Here should go Azure SignalR Service .AddAzureSignalR();
 
 builder.Services.AddCors(options =>
 {
