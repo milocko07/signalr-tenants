@@ -49,6 +49,11 @@ This repository demonstrates the integration flow from an angular and vanilla js
    dotnet user-secrets init
    dotnet user-secrets set Azure:SignalR:ConnectionString "<Your azure signalr connection string>"
 3. Then run again the service and the client apps.
+4. You should see something similar to this:
+
+   ![image](https://github.com/milocko07/signalr-tenants/assets/37205551/04455152-a590-40cc-b3e1-ff4acf4d6874)
+
+5. Finally you can monitor the SignalR service in the azure portal.
   
 
 
