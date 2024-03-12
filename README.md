@@ -7,7 +7,8 @@ This repository demonstrates the integration flow from an angular and vanilla js
 ## Prerequisites
 
 - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/community/) installed.
-- [npm](https://www.npmjs.com/) package manager installed.
+- [NPM](https://www.npmjs.com/) package manager installed.
+- An azure SignalR service (optional).
 
 ## Setup
 
@@ -41,6 +42,14 @@ This repository demonstrates the integration flow from an angular and vanilla js
 
     ![image](https://github.com/milocko07/signalr-tenants/assets/37205551/571c34a8-072f-4a2e-a8fe-785e3fb59714)
 
+## Setup with Azure SignalR Service
+
+1. Same steps as above but adding the AddAzureSignalR() method into the pipeline in [line 9](https://github.com/milocko07/signalr-tenants/blob/Seed/SignalR.HubService/Program.cs).
+2. Then follow the [official guide]([url](https://learn.microsoft.com/en-us/azure/azure-signalr/signalr-quickstart-dotnet-core) to set local credentials that basically are two steps:
+   dotnet user-secrets init
+   dotnet user-secrets set Azure:SignalR:ConnectionString "<Your azure signalr connection string>"
+3. Then run again the service and the client apps.
+  
 
 
 
